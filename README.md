@@ -2,7 +2,7 @@
 
 ## Descripción
 
-WebAd es un proyecto dedicado a la creación de páginas web. Nuestro objetivo es proporcionar soluciones web personalizadas.
+WebAd es un proyecto dedicado a la creación de páginas web. proporciono soluciones web personalizadas.
 
 ## Características
 
