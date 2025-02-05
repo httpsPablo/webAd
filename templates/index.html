@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webwork</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#" style="color: lightgreen; font-weight: bold; font-size: 32px;">WWV</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Proyectos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>WWV funciones</h1>
+            <p>Explora nuestras soluciones</p>
+            <a href="#servicios" class="btn-primary">Descubre más</a>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="services">
+        <h2>Servicios</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Diseño Web</h3>
+                <p>Desarrollamos sitios web interactivos.</p>
+            </div>
+            <div class="card">
+                <h3>SEO</h3>
+                <p>Optimización para buscadores y mejor visibilidad.</p>
+            </div>
+            <div class="card">
+                <h3>soluciones simples</h3>
+                <p>solucion para dificultades cotidianas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos Section -->
+    <section id="proyectos" class="projects">
+        <h2>Proyectos Recientes</h2>
+        <div class="project-gallery">
+            <div class="project-item">
+                <img src="../img/qreasy.jpg" alt="Proyecto 1" style="width: 150px; height: auto;">
+                <h3>QrEasy:Generacion y escaneamiento de Qr.</h3>
+            </div>
+            <div class="project-item">
+                <img src="https://via.placeholder.com/300" alt="Proyecto 2">
+                <h3>Proyecto 2</h3>
+            </div>
+            <div class="project-item">
+                <img src="https://via.placeholder.com/300" alt="Proyecto 3">
+                <h3>Proyecto 3</h3>
+            </div>
+        </div>
+    </section>
+    <!-- Contacto Section -->
+    <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <form action="mailto:pavomati735@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 MiEmpresa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../static/templates/script.js"></script>
+</body>
+</html>
