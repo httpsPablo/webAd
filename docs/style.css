@@ -5,74 +5,70 @@
     box-sizing: border-box;
 }
 
-/* Responsive Navbar */
-@media (max-width: 575px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .nav-buttons {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-    }
-}
-
-/* Body y Fuentes */
+/* Mejor manejo de la Navbar fija */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f7f6;
-    color: #333;
+    color: #333; 
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a8e6a3;
+}
 
 /* Navbar */
 .navbar {
-    background-color: #1b5e20;
-    padding: 20px;
+    background: linear-gradient(to right, rgba(27, 94, 31, 0.15), rgba(235, 238, 235, 0.15));
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 .navbar .logo a {
     color: white;
     font-size: 24px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     flex: 1;
     margin: 0 auto;
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.3);
+    margin-right: 90.75px;
 }
 
 .nav-links li {
-    margin-left: 30px;
-    margin-right: 30px;
-
-    
+    margin: 0 20px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a8e6a3;
 }
 
 .nav-buttons .btn {
@@ -82,123 +78,145 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 .nav-buttons .btn:hover {
     background-color: #388e3c;
+    transform: scale(1.05);
 }
 
 /* Hero Section */
 .hero {
-    background-color: #2e7d32;
+    background: radial-gradient(circle, rgba(46, 125, 50, 1) 0%, rgba(29, 99, 33, 0.8) 100%);
     color: white;
     text-align: center;
-    padding: 100px 0;
+    padding: 100px 20px;
 }
 
 .hero-content h1 {
     font-size: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    font-family: "ubuntu sans mono";
+    letter-spacing: 20px;
+    padding-left: 20px;
 }
 
 .hero-content p {
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .hero .btn-primary {
-    background-color: #388e3c;
-    padding: 15px 30px;
+    background-color: #378a4a;
+    padding: 12px 25px;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .hero .btn-primary:hover {
-    background-color: #1b5e20;
+    background-color: #2a6d2a;
+    transform: scale(1.05);
 }
 
-/* Services Section */
-.services {
+hr {
+    width: 50%;
+    border: 1px solid #000000;
+    margin: 0px auto;
+    margin-top: 100px;
+}
+
+/* Sections */
+.services, .projects, .contact {
     text-align: center;
     padding: 50px 20px;
 }
 
-.services h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
+.services { 
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+    font-family: "ubuntu sans mono";
 }
 
-.service-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.projects {
+    background: linear-gradient(to bottom, #ffffff, #23922c);
 }
 
-.card {
+.services h2, .projects h2, .contact h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 20px;
+}
+
+.services .card {
     background-color: white;
     padding: 20px;
-    width: 250px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;    
+    box-shadow: 5px 5px 5px  5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: inline-block;
+    vertical-align: top;
 }
 
-.card h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-.card p {
-    font-size: 16px;
-}
-
-/* Projects Section */
-.projects {
-    background-color: #fafafa;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.projects h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
-}
-
+/* Estilos para las tarjetas de proyectos */
 .project-gallery {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
 }
 
+
 .project-item {
-    background-color: white;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: 250px;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+    border-radius: 20px;
+    overflow: hidden;
     text-align: center;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    padding-top: 0px;
 }
 
 .project-item img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-/* Contact Form Section */
-.contact {
-    background-color: #f4f7f6;
-    padding: 50px 20px;
-    text-align: center;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px; /* Elimina el redondeo en los bordes de la imagen */
 }
 
-.contact h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
+
+
+.project-item h3 {
+    color: #07330b;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.project-item p {
+    color: #25352a;
+    font-size: 10px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5cap rgba(255, 255, 255, 0.582);
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
 }
 
+/* Contact Form */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -208,15 +226,7 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-label {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-input,
-textarea {
+input, textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -232,11 +242,12 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 button:hover {
     background-color: #388e3c;
+    transform: scale(1.05);
 }
 
 /* Footer */
