@@ -1,4 +1,4 @@
-# WebAd/WWWV
+# WebAd/WWV
 WebWorkVision es el nombre que le doy a este proyecto en el cual busco crear webs monetizadas.
 
 ## Descripción
